@@ -1,0 +1,104 @@
+* {
+  font-family: monospace;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+html {
+  background-image: radial-gradient(circle, #f4eff1, #e79124);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  padding: 1rem;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: 100px repeat(5, 80px);
+  grid-gap: 4px;
+  padding: 4px;
+  background-color: rgb(31, 31, 31);
+  border-style: solid;
+  border-color: rgb(31, 31, 31);
+  border-width: 10px;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+
+.display {
+  /* max-width:max-content; */
+  font-size: 4rem;
+  padding-right: 0.5rem;
+  background-color: rgb(187, 187, 187);
+  grid-column-start: span 4;
+  border-style: solid;
+  border-color: rgb(31, 31, 31);
+  border-width: 2px 2px 10px 2px;
+  border-radius: 0.8rem;
+}
+
+#zero {
+  grid-column-start: span 2;
+}
+
+.operator,
+.equals {
+  background-color: #e79124;
+}
+
+.operand,
+.decimal {
+  background-color: #4c4c4c;
+}
+
+.clear,
+.sign,
+.percent {
+  background-color: #818286;
+}
+button {
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-width: 2px 2px 10px 2px;
+  user-select: none;
+  transition: all 0.2 ease-out;
+}
+
+button:hover {
+  /* background-color: #bebebe; */
+  outline: 0.2rem solid #ffdb47;
+  outline-offset: -0.1rem;
+}
+
+button:active {
+  /* background-color: #bebebe; */
+  border: 0.2rem solid #ffdb47;
+  outline-offset: -0.1rem;
+}
+
+.operator:focus {
+  background-color: #ffc183;
+  border: 0.2rem solid #ffdb47;
+  outline-offset: -0.1rem;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.footer {
+  font-size: 1.5rem;
+}
